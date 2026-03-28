@@ -29,8 +29,8 @@ This script does the one thing the app was good at - beautiful daily wallpapers 
 
 1. Clone this repository (or download and extract it) to a permanent location:
    ```
-   git clone https://github.com/Midnight-Owl-1/BingWallpaper.git
-   cd BingWallpaper
+   git clone https://github.com/Midnight-Owl-1/BingWallpaperLite.git
+   cd BingWallpaperLite
    ```
 
 2. Install dependencies:
