@@ -10,7 +10,7 @@ Microsoft's official Bing Wallpaper app has some problems:
 - Installs bloatware (desktop widgets, visual search buttons)
 - Takes up ~900 MB of disk space
 
-This script does the one thing the app was good at — beautiful daily wallpapers — with none of the baggage.
+This script does the one thing the app was good at - beautiful daily wallpapers - with none of the baggage.
 
 ## How It Works
 
@@ -37,7 +37,7 @@ This script does the one thing the app was good at — beautiful daily wallpaper
    ```
    pip install -r requirements.txt
    ```
-   > **Note:** `pyvda` is only needed if you use multiple virtual desktops. The script works fine without it — it will just set the wallpaper on your current desktop.
+   > **Note:** `pyvda` is only needed if you use multiple virtual desktops. The script works fine without it - it will just set the wallpaper on your current desktop.
 
 3. Run it once to verify everything works:
    ```
@@ -53,7 +53,7 @@ To get a new wallpaper every day automatically:
 3. **General** tab:
    - Name: `Daily Bing Wallpaper`
    - Check **Run only when user is logged on**
-4. **Triggers** tab — add two triggers:
+4. **Triggers** tab - add two triggers:
    - **Daily** at **3:00 AM**
    - **At log on** (catches up if the PC was off at 3 AM)
 5. **Actions** tab:
@@ -79,4 +79,4 @@ This shows a numbered list of every wallpaper you've downloaded. Enter a number 
 
 - **Image source:** This script relies on [bingwallpaper.anerg.com](https://bingwallpaper.anerg.com), a community archive of Bing's daily images. It has been online and actively maintained since 2009. If the site ever goes down, the script will simply fail gracefully without changing your current wallpaper.
 - **Virtual desktops are optional.** If you don't use them (or don't install `pyvda`), the script just sets the wallpaper on your single desktop.
-- Images are saved to `%USERPROFILE%\Pictures\BingDaily\` — you can delete old ones whenever you like.
+- Images are saved to `%USERPROFILE%\Pictures\BingDaily\` - you can delete old ones whenever you like.
