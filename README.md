@@ -1,6 +1,8 @@
-# Bing Wallpaper
+# Bing Wallpaper Lite
 
 A lightweight Python script that automatically downloads the daily [Bing homepage wallpaper](https://bingwallpaper.anerg.com) in 4K and sets it as your Windows desktop background. If you use multiple virtual desktops, each one gets a different recent image.
+
+See blog post [here](https://lucasalvo.com/post/bing-wallpaper-with-python-for-windows) for the motivation behind this project.
 
 ## Why?
 
