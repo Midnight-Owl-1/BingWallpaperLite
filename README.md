@@ -8,7 +8,7 @@ Microsoft's official Bing Wallpaper app has some problems:
 - Sometimes stops updating for days at a time
 - Opens the Bing homepage in your browser uninvited
 - Installs bloatware (desktop widgets, visual search buttons)
-- Takes up ~900 MB of disk space
+- Takes up ~900 MB of disk space (?!?)
 
 This script does the one thing the app was good at - beautiful daily wallpapers - with none of the baggage.
 

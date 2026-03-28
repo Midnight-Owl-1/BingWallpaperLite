@@ -121,16 +121,17 @@ def browse_mode():
     for idx, row in enumerate(rows):
         print(f'[{idx}] {row[0]}: {row[1]}')
 
-    try:
-        choice = input('Enter number to apply wallpaper (or Enter to exit): ').strip()
-        if choice:
-            idx   = int(choice)
-            n     = _get_desktop_count()
-            paths = [r[1] for r in rows[idx:idx + n]]
-            _apply_to_desktops(paths)
+    while True:
+        try:
+            choice = input('Enter number to apply wallpaper (or q to quit): ').strip()
+            if not choice or choice.lower() == 'q':
+                break
+            idx  = int(choice)
+            path = rows[idx][1]
+            ctypes.windll.user32.SystemParametersInfoW(20, 0, path, 3)
             print('Wallpaper updated!')
-    except (ValueError, IndexError):
-        print('Invalid selection.')
+        except (ValueError, IndexError):
+            print('Invalid selection.')
 
 
 if __name__ == '__main__':
