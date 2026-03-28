@@ -69,16 +69,15 @@ def get_latest_bing_info():
     if not detail_link:
         return None, None
     detail_url  = BASE_URL + detail_link['href']
-    title       = detail_link.text.strip()
     detail_resp = requests.get(detail_url, timeout=10)
     detail_soup = BeautifulSoup(detail_resp.text, 'html.parser')
     uhd_node    = detail_soup.find('a', href=lambda x: x and 'w:3840' in x)
     if not uhd_node:
         uhd_node = detail_soup.find('a', string=lambda x: x and 'UHD' in x.upper())
     if not uhd_node:
-        return title, None
+        return None
     href = uhd_node['href']
-    return title, href if href.startswith('http') else BASE_URL + href
+    return href if href.startswith('http') else BASE_URL + href
 
 
 def run_daily_update():
@@ -91,7 +90,7 @@ def run_daily_update():
         return
 
     print("Fetching today's 4K wallpaper...")
-    title, img_url = get_latest_bing_info()
+    img_url = get_latest_bing_info()
     if not img_url:
         print('Failed to find 4K image.')
         return
@@ -109,7 +108,6 @@ def run_daily_update():
     n     = _get_desktop_count()
     rows  = conn.execute('SELECT local_path FROM wallpapers ORDER BY date DESC LIMIT ?', (n,)).fetchall()
     _apply_to_desktops([r[0] for r in rows])
-    print(f'Success! Wallpaper set to: {title}')
 
 
 def browse_mode():
