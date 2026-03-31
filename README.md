@@ -57,8 +57,7 @@ To get a new wallpaper every day automatically:
    - Check **Run only when user is logged on**
 4. **Triggers** tab - add two triggers:
    - **Daily** at **3:00 AM**
-   - **At log on** (catches up if the PC was off at 3 AM) 
-      - **Important**: Add 'Delay task for' 30 seconds to allow time for windows to get everything ready after the login
+   - **On an event** -> Log: System, Source: Power-Troubleshooter, Event ID: 1 (Runs when system wakes up from sleep)
 5. **Actions** tab:
    - Action: **Start a program**
    - Program/script: Browse to `run_bing.bat` in this folder
