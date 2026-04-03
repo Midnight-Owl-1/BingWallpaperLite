@@ -55,8 +55,7 @@ To get a new wallpaper every day automatically:
 3. **General** tab:
    - Name: `Daily Bing Wallpaper`
    - Check **Run only when user is logged on**
-4. **Triggers** tab - add two triggers:
-   - **Daily** at **3:00 AM**
+4. **Triggers** tab - add one triggers:
    - **On an event** -> Log: System, Source: Power-Troubleshooter, Event ID: 1 (Runs when system wakes up from sleep)
 5. **Actions** tab:
    - Action: **Start a program**

@@ -88,6 +88,10 @@ def run_daily_update():
     if last_run and last_run[0] == today:
         print(f'Already updated today ({today}).')
         return
+    
+    if datetime.now().hour < 6:
+        print("It's before 6am local time. Waiting until Bing updates the wallpaper...")
+        return
 
     print("Fetching today's 4K wallpaper...")
     img_url = get_latest_bing_info()
